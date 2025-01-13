@@ -1,0 +1,17 @@
+services:
+  comfyui:
+    container_name: llama-cpp-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: llama-cpp-image
+
+    volumes:
+      - ..:/home/dev/projects/
+      - ./models:/home/dev/llama.cpp/build/bin/models
+    ports:
+      - '8188:8188'
+    stdin_open: true
+    tty: true
+    devices:
+      - nvidia.com/gpu=all
