@@ -1,5 +1,5 @@
 services:
-  comfyui:
+  llama-cpp:
     container_name: llama-cpp-container
     build:
       context: .
