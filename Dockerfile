@@ -11,7 +11,7 @@ RUN pacman -Syu git neovim locate sudo libgl base-devel less wget openmpi plocat
 RUN groupadd sudo
 RUN useradd -rm -d /home/dev -s /bin/bash -g root -G sudo -u 1001 -p "$(openssl passwd -1 password)" dev
 # Gives the user to have root permissions:
-RUN echo '%sudo ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+#RUN echo '%sudo ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 USER dev
 WORKDIR /home/dev
