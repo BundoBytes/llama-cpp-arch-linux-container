@@ -1,10 +1,10 @@
 services:
   llama-cpp:
-    container_name: llama-cpp-container
+    container_name: llama-cpp-nvidia-container
     build:
       context: .
       dockerfile: Dockerfile
-    image: llama-cpp-image
+    image: llama-cpp-nvidia-image
 
     volumes:
       - ..:/home/dev/projects/

@@ -14,5 +14,9 @@ This is a podman script to build an environment capable of running llama.cpp in 
     ```
     Visit [llama.cpp cuda args](https://github.com/ggerganov/llama.cpp/blob/master/docs/build.md#cuda) for more info.
 
-2. Execute 'podman-compose build' to create the image.
-3. 'podman-compose up' will create and run the container.
+2. Build the image with **'podman-compose build'**
+3. Run the container with **'podman-compose up'** and execute the following script in the home directory:
+    ```
+    ./build_server.sh
+    ./start_server.sh
+    ```
